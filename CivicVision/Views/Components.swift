@@ -65,7 +65,7 @@ struct ScoreRing: View {
     var caption: String? = nil
 
     var body: some View {
-        let pct = max(0, min(100, value)) / 100
+        let pct = CGFloat(max(0, min(100, value)) / 100)
         let lineWidth = size * 0.09
         ZStack {
             Circle()
@@ -109,7 +109,7 @@ struct MeterBar: View {
             ZStack(alignment: .leading) {
                 Capsule().fill(Theme.surfaceHover)
                 Capsule().fill(color)
-                    .frame(width: geo.size.width * max(0.03, min(1, fraction)))
+                    .frame(width: geo.size.width * CGFloat(max(0.03, min(1, fraction))))
                     .animation(.easeOut(duration: 0.6), value: fraction)
             }
         }

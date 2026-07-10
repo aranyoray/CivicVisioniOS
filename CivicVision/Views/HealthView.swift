@@ -117,11 +117,11 @@ private struct ConditionRow: View {
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     Capsule().fill(Theme.surfaceHover)
-                    Capsule().fill(band.fg).frame(width: geo.size.width * countyFrac)
+                    Capsule().fill(band.fg).frame(width: geo.size.width * CGFloat(countyFrac))
                     // US average marker
                     Rectangle().fill(Theme.textTertiary)
                         .frame(width: 2)
-                        .offset(x: geo.size.width * usFrac - 1)
+                        .offset(x: geo.size.width * CGFloat(usFrac) - 1)
                 }
             }
             .frame(height: 8)

@@ -50,11 +50,13 @@ struct AirView: View {
                     VStack(spacing: 16) {
                         ForEach(air.subs) { s in
                             let idx = s.index ?? 0
+                            let idxText = s.index.map { String($0) } ?? "—"
+                            let affects = systems[s.pollutant] ?? ""
                             Meter(
                                 label: s.pollutant.label,
                                 score: max(3, 100 - Double(idx) * 0.4),
                                 valueText: "\(fmtNum(s.concentration)) µg/m³",
-                                reference: "Sub-AQI \(s.index.map(String.init) ?? "—") · affects \(systems[s.pollutant] ?? "")",
+                                reference: "Sub-AQI \(idxText) · affects \(affects)",
                                 band: bandFromAqi(idx)
                             )
                         }

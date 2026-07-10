@@ -12,14 +12,14 @@ enum GeoStatus: String {
 struct Coord: Equatable {
     var lat: Double
     var lon: Double
-    var accuracy: Double?
+    var accuracy: Double? = nil
     var timestamp: Date
-    var label: String?
+    var label: String? = nil
     var source: Source
-    var state: String?
-    var stateAbbr: String?
-    var county: String?
-    var countryCode: String?
+    var state: String? = nil
+    var stateAbbr: String? = nil
+    var county: String? = nil
+    var countryCode: String? = nil
 
     enum Source: String { case gps, manual }
 }

@@ -34,10 +34,10 @@ enum WaterService {
         struct Accum {
             var name: String
             var distance: Double
-            var tempC: Double?
-            var pH: Double?
-            var doMgL: Double?
-            var turbidity: Double?
+            var tempC: Double? = nil
+            var pH: Double? = nil
+            var doMgL: Double? = nil
+            var turbidity: Double? = nil
             var timestamp: Date
         }
         var bySite: [String: Accum] = [:]

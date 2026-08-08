@@ -64,7 +64,7 @@ struct PredictView: View {
     private func scenarioHero(p: Prediction, store: ExposureStore) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text("RECOVERABLE AT THIS SCENARIO")
-                .font(.system(size: 11, weight: .semibold)).tracking(0.6)
+                .font(.caption2.weight(.semibold)).tracking(0.6)
                 .foregroundStyle(Theme.textTertiary)
             HStack(alignment: .bottom, spacing: 6) {
                 Text(fmtQaly(p.totalRecoverablePer100k))
@@ -108,6 +108,7 @@ struct PredictView: View {
     private func presetButton(_ label: String, _ value: Double, store: ExposureStore) -> some View {
         let active = abs(store.scenario - value) < 0.001
         return Button {
+            Haptics.tap()
             store.setScenario(value)
         } label: {
             Text(label).font(.caption.weight(.medium))
@@ -138,7 +139,7 @@ struct PredictView: View {
                 Spacer(minLength: 8)
                 Text("≈ \(fmtNum(s.recoverableCounty, 0)) QALY/yr county")
             }
-            .font(.system(size: 11)).foregroundStyle(Theme.textTertiary)
+            .font(.caption2).foregroundStyle(Theme.textTertiary)
         }
         .cardSurface(padding: 16)
     }
@@ -164,7 +165,7 @@ struct PredictView: View {
                     HStack(spacing: 6) {
                         ForEach(f.systems) { sys in
                             Text(sysMeta(sys).label)
-                                .font(.system(size: 10, weight: .medium))
+                                .font(.caption2.weight(.medium))
                                 .padding(.horizontal, 6).padding(.vertical, 2)
                                 .background(Capsule().fill(Theme.surfaceHover))
                                 .foregroundStyle(Theme.textTertiary)

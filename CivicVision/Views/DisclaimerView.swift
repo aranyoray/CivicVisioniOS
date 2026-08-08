@@ -34,7 +34,10 @@ struct DisclaimerGate: View {
             }
 
             VStack(spacing: 10) {
-                Button(action: onAccept) {
+                Button(action: {
+                    Haptics.success()
+                    onAccept()
+                }) {
                     Text("I understand — continue")
                         .font(.headline)
                         .frame(maxWidth: .infinity)

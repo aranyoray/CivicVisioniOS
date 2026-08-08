@@ -108,7 +108,7 @@ private struct ConditionRow: View {
                     Text("\(fmtNum(c.countyPct))%")
                         .font(.subheadline.weight(.bold)).monospacedDigit().foregroundStyle(Theme.text)
                     Text("\(fmtDelta(c.vsUS)) pp vs US")
-                        .font(.system(size: 10, weight: .semibold)).monospacedDigit()
+                        .font(.caption2.weight(.semibold)).monospacedDigit()
                         .padding(.horizontal, 6).padding(.vertical, 2)
                         .background(Capsule().fill(worse ? RiskBand.unhealthy.bg : RiskBand.good.bg))
                         .foregroundStyle(worse ? RiskBand.unhealthy.fg : RiskBand.good.fg)
@@ -126,7 +126,7 @@ private struct ConditionRow: View {
             }
             .frame(height: 8)
             Text("State \(fmtNum(c.statePct))% · US avg \(fmtNum(c.usPct))% (marker)")
-                .font(.system(size: 11)).foregroundStyle(Theme.textTertiary)
+                .font(.caption2).foregroundStyle(Theme.textTertiary)
         }
     }
 }

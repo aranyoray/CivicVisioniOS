@@ -1,6 +1,15 @@
 // Shared UI building blocks — ports of the web app's Card / Civic components.
 
 import SwiftUI
+import UIKit
+
+// MARK: - Haptics
+
+/// Tiny helper for tactile feedback on primary actions.
+enum Haptics {
+    static func tap() { UIImpactFeedbackGenerator(style: .light).impactOccurred() }
+    static func success() { UINotificationFeedbackGenerator().notificationOccurred(.success) }
+}
 
 // MARK: - Card surface
 
@@ -44,7 +53,7 @@ struct SimBadge: View {
         HStack(spacing: 4) {
             Circle().fill(live ? RiskBand.good.fg : Theme.textTertiary).frame(width: 6, height: 6)
             Text(live ? "LIVE" : "MODELED")
-                .font(.system(size: 10, weight: .semibold))
+                .font(.caption2.weight(.semibold))
                 .tracking(0.6)
         }
         .padding(.horizontal, 8)
@@ -95,6 +104,8 @@ struct ScoreRing: View {
             .padding(lineWidth)
         }
         .frame(width: size, height: size)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(caption ?? "Score") \(Int(value.rounded())) out of 100, \(band.label)")
     }
 }
 
@@ -139,7 +150,7 @@ struct Meter: View {
             }
             MeterBar(fraction: score / 100, color: band.fg)
             if let reference {
-                Text(reference).font(.system(size: 11)).foregroundStyle(Theme.textTertiary)
+                Text(reference).font(.caption2).foregroundStyle(Theme.textTertiary)
             }
         }
     }
@@ -152,7 +163,7 @@ struct SectionLabel: View {
     init(_ text: String) { self.text = text }
     var body: some View {
         Text(text.uppercased())
-            .font(.system(size: 11, weight: .semibold))
+            .font(.caption2.weight(.semibold))
             .tracking(0.6)
             .foregroundStyle(Theme.textTertiary)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -185,14 +196,14 @@ struct MetricTile: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
             Text(label.uppercased())
-                .font(.system(size: 10, weight: .semibold)).tracking(0.5)
+                .font(.caption2.weight(.semibold)).tracking(0.5)
                 .foregroundStyle(Theme.textTertiary)
                 .lineLimit(1)
             Text(fmtMetric(value))
                 .font(.headline).monospacedDigit()
                 .foregroundStyle(Theme.text)
             if let unit {
-                Text(unit).font(.system(size: 10)).foregroundStyle(Theme.textTertiary)
+                Text(unit).font(.caption2).foregroundStyle(Theme.textTertiary)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

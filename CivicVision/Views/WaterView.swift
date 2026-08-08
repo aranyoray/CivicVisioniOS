@@ -4,12 +4,12 @@ struct WaterView: View {
     @Environment(ExposureStore.self) private var store
 
     private let advice: [RiskBand: String] = [
-        .good: "Water indicators within safe ranges across all three pillars.",
-        .moderate: "Generally safe. Sensitive households may prefer filtration for trace contaminants.",
-        .sensitive: "Elevated contaminant load. Consider certified filtration (activated carbon / RO).",
-        .unhealthy: "Contaminant load exceeds guideline levels. Use certified filtration; check local advisories.",
-        .very: "Poor water quality. Avoid untreated tap water; follow utility advisories.",
-        .hazard: "Hazardous indicators. Do not consume untreated water; contact your utility.",
+        .good: "Indicators look good across all three pillars in this model.",
+        .moderate: "Indicators look generally acceptable. Sensitive households may prefer filtration for trace contaminants.",
+        .sensitive: "Elevated contaminant load in this model. Consider certified filtration (activated carbon / RO).",
+        .unhealthy: "Modeled contaminant load exceeds guideline levels. Consider certified filtration and check your utility's advisories.",
+        .very: "Poor water-quality indicators in this model. Check your utility's current advisories before relying on untreated tap water.",
+        .hazard: "Hazardous indicators in this model. Verify with your water utility and follow official advisories.",
     ]
 
     var body: some View {
@@ -22,7 +22,7 @@ struct WaterView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         HStack {
                             Text("WATER QUALITY INDEX · WEAKEST: \(water.driver.uppercased())")
-                                .font(.system(size: 11, weight: .semibold)).tracking(0.6)
+                                .font(.caption2.weight(.semibold)).tracking(0.6)
                                 .foregroundStyle(Theme.textTertiary)
                                 .lineLimit(1).minimumScaleFactor(0.7)
                             Spacer()

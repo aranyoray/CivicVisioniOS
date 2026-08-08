@@ -33,6 +33,11 @@ struct HomeView: View {
         }
         .background(Theme.bg.ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)
+        .refreshable {
+            store.refresh()
+            // Give the refresh a beat so the pull gesture feels acknowledged.
+            try? await Task.sleep(nanoseconds: 600_000_000)
+        }
     }
 }
 
@@ -49,7 +54,19 @@ private struct LocationHeaderView: View {
                     Text("CivicVision").font(.largeTitle.bold()).foregroundStyle(Theme.text)
                 }
                 Spacer()
+                if let summary = shareSummary {
+                    ShareLink(item: summary) {
+                        Image(systemName: "square.and.arrow.up")
+                            .font(.caption.weight(.medium))
+                            .padding(.horizontal, 10).padding(.vertical, 7)
+                    }
+                    .foregroundStyle(Theme.textSecondary)
+                    .background(Capsule().fill(Theme.surface))
+                    .overlay(Capsule().stroke(Theme.border, lineWidth: 1))
+                    .accessibilityLabel("Share report summary")
+                }
                 Button {
+                    Haptics.tap()
                     store.refresh()
                 } label: {
                     if store.loadingAir || store.loadingWater {
@@ -109,6 +126,19 @@ private struct LocationHeaderView: View {
             return String(format: "%.3f, %.3f%@", coord.lat, coord.lon, acc)
         }
         return "Enter a ZIP or place to monitor your locality."
+    }
+
+    /// Plain-text summary of the current profile for the system share sheet.
+    private var shareSummary: String? {
+        guard let civic = store.civic else { return nil }
+        let place = placeString ?? "Selected location"
+        return """
+        CivicVision — \(place)
+        Civic score: \(civic.civicScore)/100 (\(civic.civicBand.label))
+        Air: US AQI \(civic.air.aqi) · Water: WQI \(civic.water.wqi) · Community health: \(civic.scores.health)/100
+        Cutting air & water pollution to WHO targets could recover ≈\(fmtQaly(civic.prediction.maxRecoverablePer100k)) QALYs per 100k residents each year.
+        Modeled civic estimates — not medical advice.
+        """
     }
 
     private var placeString: String? {

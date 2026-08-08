@@ -30,7 +30,7 @@ struct AirView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         HStack {
                             Text("US AQI · \(air.driver.label)-DRIVEN")
-                                .font(.system(size: 11, weight: .semibold)).tracking(0.6)
+                                .font(.caption2.weight(.semibold)).tracking(0.6)
                                 .foregroundStyle(Theme.textTertiary)
                             Spacer()
                             SimBadge(live: !air.simulated)

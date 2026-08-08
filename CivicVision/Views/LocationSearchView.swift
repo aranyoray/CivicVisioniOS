@@ -111,6 +111,7 @@ struct LocationSearchView: View {
     }
 
     private func pick(_ s: GeoSuggestion) {
+        Haptics.tap()
         store.setManualLocation(s)
         clear()
         focused = false

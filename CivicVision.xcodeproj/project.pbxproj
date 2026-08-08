@@ -6,128 +6,321 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0A8074F22928C0382D6CECC0 /* CivicVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BD5A39EE31ACE422FF1CA9 /* CivicVisionApp.swift */; };
+		38E5B74A42A76B96BBAC0275 /* AirService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85862B67D602AEB497C8F6EE /* AirService.swift */; };
+		3A25CE2E242BFFAC3060A8A6 /* WaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5102AB2AE56B929DFD67B5B3 /* WaterService.swift */; };
+		3A801A425A284DB911364050 /* AirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574C8FE0414020993637C87 /* AirView.swift */; };
+		3AF393C09056E9CD05B91FF1 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78957D4B3899692DB9A683B0 /* AboutView.swift */; };
+		430774C795B074AB164EC1DD /* ExposureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F862050C197B0B79AA9E6F /* ExposureStore.swift */; };
+		438CC473664FBECCCE741962 /* Wqi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AF1F16AE8F68D05A857A6 /* Wqi.swift */; };
+		4930D503067C8B85F4CAFBA5 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B28C6D4F0454A8660F99955 /* DisclaimerView.swift */; };
+		4F5A2AD018B3A93D8F986FDF /* PredictView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B270FAE4AF420E051481F /* PredictView.swift */; };
+		50F5EEB731CFEB89B131C3CD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABD75B666E97B64076840FE /* HomeView.swift */; };
+		52568C0FA6037A7D4B99DBBF /* Aqi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB30FC84FCD7BBB54F459C9 /* Aqi.swift */; };
+		5D719293AA08383BFA8A5077 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FE5F2A6B485E3754B8C20B /* Format.swift */; };
+		600868C658CD34CB99A9515E /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88CABD8C38E2BCD61C945CF /* WaterView.swift */; };
+		699E64FDE83B709602C2109F /* DetailScaffold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE9EE1400CBCE484C0F0FAA /* DetailScaffold.swift */; };
+		746F7794832C9EBA602CF85B /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0437BF367926830533B8C9 /* Geocoder.swift */; };
+		76456C658FDCBC4A3B4F573A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC59904FA325EBBE157E31 /* Theme.swift */; };
+		7D528BDFE868EAECC62E20AC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4DE178E4EC7867C908460E /* RootView.swift */; };
+		9918B1C876D1F6C95E6B246B /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A25C522E1C69B6B9E2A4B87 /* Health.swift */; };
+		A8C9851B6E23AE66983AD523 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 0B4E1FBF264B43E5973A0AC0 /* PrivacyInfo.xcprivacy */; };
+		B2F64B9047DF372CF4B6BF84 /* CivicProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE0A09D6847DD55B7D93DE /* CivicProfile.swift */; };
+		B31AFFF7F85747DF0D63845B /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474C11798AD4BEC568EF7489 /* HealthView.swift */; };
+		B6F2C5A8679326C6476056D1 /* Bands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A98C168B13796583535954 /* Bands.swift */; };
+		CB0198BABAAABD9C7CC8DFEE /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D23694AE265B2A991BFC71 /* LocationSearchView.swift */; };
+		DFD3162B78D246C320FCAE3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FEAF5C864F8E4DF2FE6C18 /* Assets.xcassets */; };
+		E68654B42EAE4C959F71B9AF /* Predict.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA365E06159BC66D90FEB439 /* Predict.swift */; };
+		F7CB3AA9C60824F036171C99 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EBD031898086272F4A9A3C /* Components.swift */; };
+		FE608A7BE71DE0A4D5BB39BA /* Rng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827AB9409EA559413FB172E8 /* Rng.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		1A0000000000000000000004 /* CivicVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CivicVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B4E1FBF264B43E5973A0AC0 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1A6AF1F16AE8F68D05A857A6 /* Wqi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wqi.swift; sourceTree = "<group>"; };
+		1ABD75B666E97B64076840FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		25FE5F2A6B485E3754B8C20B /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
+		39FD915BBD3D6F8FFE6BC298 /* CivicVision.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CivicVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4DE178E4EC7867C908460E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		43F862050C197B0B79AA9E6F /* ExposureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureStore.swift; sourceTree = "<group>"; };
+		474C11798AD4BEC568EF7489 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		48EBD031898086272F4A9A3C /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		4B28C6D4F0454A8660F99955 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		5102AB2AE56B929DFD67B5B3 /* WaterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterService.swift; sourceTree = "<group>"; };
+		51BD5A39EE31ACE422FF1CA9 /* CivicVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivicVisionApp.swift; sourceTree = "<group>"; };
+		5574C8FE0414020993637C87 /* AirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirView.swift; sourceTree = "<group>"; };
+		66FE0A09D6847DD55B7D93DE /* CivicProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivicProfile.swift; sourceTree = "<group>"; };
+		694B270FAE4AF420E051481F /* PredictView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictView.swift; sourceTree = "<group>"; };
+		69D23694AE265B2A991BFC71 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		73FEAF5C864F8E4DF2FE6C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78957D4B3899692DB9A683B0 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		80BC59904FA325EBBE157E31 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		827AB9409EA559413FB172E8 /* Rng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rng.swift; sourceTree = "<group>"; };
+		85862B67D602AEB497C8F6EE /* AirService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirService.swift; sourceTree = "<group>"; };
+		89A98C168B13796583535954 /* Bands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bands.swift; sourceTree = "<group>"; };
+		8DB30FC84FCD7BBB54F459C9 /* Aqi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aqi.swift; sourceTree = "<group>"; };
+		8FE9EE1400CBCE484C0F0FAA /* DetailScaffold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScaffold.swift; sourceTree = "<group>"; };
+		9A25C522E1C69B6B9E2A4B87 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
+		9D0437BF367926830533B8C9 /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
+		A88CABD8C38E2BCD61C945CF /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		EA365E06159BC66D90FEB439 /* Predict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predict.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		1A000000000000000000000F /* CivicVision */ = {isa = PBXFileSystemSynchronizedRootGroup; path = CivicVision; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		1A0000000000000000000007 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		1A0000000000000000000002 = {
+		271FC180E690FF1BF81462E6 /* CivicVision */ = {
 			isa = PBXGroup;
 			children = (
-				1A000000000000000000000F /* CivicVision */,
-				1A0000000000000000000003 /* Products */,
+				73FEAF5C864F8E4DF2FE6C18 /* Assets.xcassets */,
+				51BD5A39EE31ACE422FF1CA9 /* CivicVisionApp.swift */,
+				0B4E1FBF264B43E5973A0AC0 /* PrivacyInfo.xcprivacy */,
+				71668F1140170F2F92A67C15 /* Engine */,
+				97D5A5C09340E3CC436B456D /* Services */,
+				8022595C0EEAE3276AB0B1AB /* Store */,
+				FA2242F29EC031C202717329 /* Theme */,
+				92346ADCEF08508F2A269D19 /* Views */,
+			);
+			path = CivicVision;
+			sourceTree = "<group>";
+		};
+		3041654D93E49F797A577AF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39FD915BBD3D6F8FFE6BC298 /* CivicVision.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48C4D737A506B3B02BEF9AA3 = {
+			isa = PBXGroup;
+			children = (
+				271FC180E690FF1BF81462E6 /* CivicVision */,
+				3041654D93E49F797A577AF7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1A0000000000000000000003 /* Products */ = {
+		71668F1140170F2F92A67C15 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				1A0000000000000000000004 /* CivicVision.app */,
+				8DB30FC84FCD7BBB54F459C9 /* Aqi.swift */,
+				89A98C168B13796583535954 /* Bands.swift */,
+				66FE0A09D6847DD55B7D93DE /* CivicProfile.swift */,
+				25FE5F2A6B485E3754B8C20B /* Format.swift */,
+				9A25C522E1C69B6B9E2A4B87 /* Health.swift */,
+				EA365E06159BC66D90FEB439 /* Predict.swift */,
+				827AB9409EA559413FB172E8 /* Rng.swift */,
+				1A6AF1F16AE8F68D05A857A6 /* Wqi.swift */,
 			);
-			name = Products;
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		8022595C0EEAE3276AB0B1AB /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				43F862050C197B0B79AA9E6F /* ExposureStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		92346ADCEF08508F2A269D19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78957D4B3899692DB9A683B0 /* AboutView.swift */,
+				5574C8FE0414020993637C87 /* AirView.swift */,
+				48EBD031898086272F4A9A3C /* Components.swift */,
+				8FE9EE1400CBCE484C0F0FAA /* DetailScaffold.swift */,
+				4B28C6D4F0454A8660F99955 /* DisclaimerView.swift */,
+				474C11798AD4BEC568EF7489 /* HealthView.swift */,
+				1ABD75B666E97B64076840FE /* HomeView.swift */,
+				69D23694AE265B2A991BFC71 /* LocationSearchView.swift */,
+				694B270FAE4AF420E051481F /* PredictView.swift */,
+				3B4DE178E4EC7867C908460E /* RootView.swift */,
+				A88CABD8C38E2BCD61C945CF /* WaterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97D5A5C09340E3CC436B456D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				85862B67D602AEB497C8F6EE /* AirService.swift */,
+				9D0437BF367926830533B8C9 /* Geocoder.swift */,
+				5102AB2AE56B929DFD67B5B3 /* WaterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA2242F29EC031C202717329 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				80BC59904FA325EBBE157E31 /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A0000000000000000000005 /* CivicVision */ = {
+		47519CE3741FFA99A40B8706 /* CivicVision */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A000000000000000000000C /* Build configuration list for PBXNativeTarget "CivicVision" */;
+			buildConfigurationList = 7CE39F9B1EE170C3726CCB23 /* Build configuration list for PBXNativeTarget "CivicVision" */;
 			buildPhases = (
-				1A0000000000000000000006 /* Sources */,
-				1A0000000000000000000007 /* Frameworks */,
-				1A0000000000000000000008 /* Resources */,
+				6905E629E091330594D1105F /* Sources */,
+				CA8074F90E8296AD4DDB42CC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				1A000000000000000000000F /* CivicVision */,
-			);
 			name = CivicVision;
+			packageProductDependencies = (
+			);
 			productName = CivicVision;
-			productReference = 1A0000000000000000000004 /* CivicVision.app */;
+			productReference = 39FD915BBD3D6F8FFE6BC298 /* CivicVision.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1A0000000000000000000001 /* Project object */ = {
+		7778C68B9CEC3A94CF86E936 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					1A0000000000000000000005 = {
-						CreatedOnToolsVersion = 16.0;
-					};
 				};
 			};
-			buildConfigurationList = 1A0000000000000000000009 /* Build configuration list for PBXProject "CivicVision" */;
-			compatibilityVersion = "Xcode 15.0";
+			buildConfigurationList = 7F10400C79539BAFD16BC5D0 /* Build configuration list for PBXProject "CivicVision" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 1A0000000000000000000002;
+			mainGroup = 48C4D737A506B3B02BEF9AA3;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 1A0000000000000000000003 /* Products */;
+			productRefGroup = 3041654D93E49F797A577AF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A0000000000000000000005 /* CivicVision */,
+				47519CE3741FFA99A40B8706 /* CivicVision */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1A0000000000000000000008 /* Resources */ = {
+		CA8074F90E8296AD4DDB42CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD3162B78D246C320FCAE3E /* Assets.xcassets in Resources */,
+				A8C9851B6E23AE66983AD523 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A0000000000000000000006 /* Sources */ = {
+		6905E629E091330594D1105F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF393C09056E9CD05B91FF1 /* AboutView.swift in Sources */,
+				38E5B74A42A76B96BBAC0275 /* AirService.swift in Sources */,
+				3A801A425A284DB911364050 /* AirView.swift in Sources */,
+				52568C0FA6037A7D4B99DBBF /* Aqi.swift in Sources */,
+				B6F2C5A8679326C6476056D1 /* Bands.swift in Sources */,
+				B2F64B9047DF372CF4B6BF84 /* CivicProfile.swift in Sources */,
+				0A8074F22928C0382D6CECC0 /* CivicVisionApp.swift in Sources */,
+				F7CB3AA9C60824F036171C99 /* Components.swift in Sources */,
+				699E64FDE83B709602C2109F /* DetailScaffold.swift in Sources */,
+				4930D503067C8B85F4CAFBA5 /* DisclaimerView.swift in Sources */,
+				430774C795B074AB164EC1DD /* ExposureStore.swift in Sources */,
+				5D719293AA08383BFA8A5077 /* Format.swift in Sources */,
+				746F7794832C9EBA602CF85B /* Geocoder.swift in Sources */,
+				9918B1C876D1F6C95E6B246B /* Health.swift in Sources */,
+				B31AFFF7F85747DF0D63845B /* HealthView.swift in Sources */,
+				50F5EEB731CFEB89B131C3CD /* HomeView.swift in Sources */,
+				CB0198BABAAABD9C7CC8DFEE /* LocationSearchView.swift in Sources */,
+				E68654B42EAE4C959F71B9AF /* Predict.swift in Sources */,
+				4F5A2AD018B3A93D8F986FDF /* PredictView.swift in Sources */,
+				FE608A7BE71DE0A4D5BB39BA /* Rng.swift in Sources */,
+				7D528BDFE868EAECC62E20AC /* RootView.swift in Sources */,
+				76456C658FDCBC4A3B4F573A /* Theme.swift in Sources */,
+				3A25CE2E242BFFAC3060A8A6 /* WaterService.swift in Sources */,
+				600868C658CD34CB99A9515E /* WaterView.swift in Sources */,
+				438CC473664FBECCCE741962 /* Wqi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1A000000000000000000000A /* Debug */ = {
+		248F66B8A478E57BE9E5D2C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CivicVision;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "CivicVision uses your location to show air, water, and community-health data for your area. You can also search for a ZIP or place instead.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lol.raviraj.civicvision;
+				PRODUCT_NAME = CivicVision;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E13832BA04816315A0629BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CivicVision;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "CivicVision uses your location to show air, water, and community-health data for your area. You can also search for a ZIP or place instead.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lol.raviraj.civicvision;
+				PRODUCT_NAME = CivicVision;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7413F49577D578F1C1E862D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -154,17 +347,75 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		865FB102EDA60AE95214F8C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -173,155 +424,40 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
-		};
-		1A000000000000000000000B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1A000000000000000000000D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CivicVision;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "CivicVision uses your location to show air, water, and community-health data for your area. You can also search for a ZIP or place instead.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lol.raviraj.civicvision;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1A000000000000000000000E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CivicVision;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "CivicVision uses your location to show air, water, and community-health data for your area. You can also search for a ZIP or place instead.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lol.raviraj.civicvision;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A0000000000000000000009 /* Build configuration list for PBXProject "CivicVision" */ = {
+		7CE39F9B1EE170C3726CCB23 /* Build configuration list for PBXNativeTarget "CivicVision" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A000000000000000000000A /* Debug */,
-				1A000000000000000000000B /* Release */,
+				248F66B8A478E57BE9E5D2C9 /* Debug */,
+				2E13832BA04816315A0629BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		1A000000000000000000000C /* Build configuration list for PBXNativeTarget "CivicVision" */ = {
+		7F10400C79539BAFD16BC5D0 /* Build configuration list for PBXProject "CivicVision" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A000000000000000000000D /* Debug */,
-				1A000000000000000000000E /* Release */,
+				865FB102EDA60AE95214F8C2 /* Debug */,
+				7413F49577D578F1C1E862D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1A0000000000000000000001 /* Project object */;
+	rootObject = 7778C68B9CEC3A94CF86E936 /* Project object */;
 }

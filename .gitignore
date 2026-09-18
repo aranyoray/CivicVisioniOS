@@ -27,3 +27,14 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+node_modules/
+.next/
+dist/
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/
+venv/
+.history/
+*.log

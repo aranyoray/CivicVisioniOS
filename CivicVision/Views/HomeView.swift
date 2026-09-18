@@ -2,34 +2,18 @@ import SwiftUI
 
 struct HomeView: View {
     @Environment(ExposureStore.self) private var store
+    @Environment(\.horizontalSizeClass) private var hSize
+
+    /// iPad / large widths get a multi-column dashboard; iPhone stays single-column.
+    private var isRegular: Bool { hSize == .regular }
 
     var body: some View {
         ScrollView {
-            VStack(spacing: 12) {
-                LocationHeaderView()
-                if store.civic != nil {
-                    CivicHero()
-                }
-                AirCard()
-                WaterCard()
-                HealthCard()
-                PredictCard()
-                NavigationLink(destination: AboutView()) {
-                    HStack(spacing: 12) {
-                        Image(systemName: "info.circle")
-                        Text("Sources & methods").font(.subheadline.weight(.medium))
-                        Spacer()
-                        Image(systemName: "chevron.right").font(.caption).foregroundStyle(Theme.textTertiary)
-                    }
-                    .foregroundStyle(Theme.textSecondary)
-                    .cardSurface(padding: 16)
-                }
-                .buttonStyle(.plain)
-            }
-            .frame(maxWidth: 540)
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 16)
+            dashboard
+                .frame(maxWidth: isRegular ? 1040 : 540)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, isRegular ? 28 : 20)
+                .padding(.vertical, 16)
         }
         .background(Theme.bg.ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)
@@ -38,6 +22,51 @@ struct HomeView: View {
             // Give the refresh a beat so the pull gesture feels acknowledged.
             try? await Task.sleep(nanoseconds: 600_000_000)
         }
+    }
+
+    @ViewBuilder
+    private var dashboard: some View {
+        if isRegular {
+            VStack(spacing: 16) {
+                LocationHeaderView()
+                if store.civic != nil { CivicHero() }
+                LazyVGrid(
+                    columns: [GridItem(.flexible(), spacing: 16),
+                              GridItem(.flexible(), spacing: 16)],
+                    spacing: 16
+                ) {
+                    AirCard()
+                    WaterCard()
+                    HealthCard()
+                    PredictCard()
+                }
+                sourcesLink
+            }
+        } else {
+            VStack(spacing: 12) {
+                LocationHeaderView()
+                if store.civic != nil { CivicHero() }
+                AirCard()
+                WaterCard()
+                HealthCard()
+                PredictCard()
+                sourcesLink
+            }
+        }
+    }
+
+    private var sourcesLink: some View {
+        NavigationLink(destination: AboutView()) {
+            HStack(spacing: 12) {
+                Image(systemName: "info.circle")
+                Text("Sources & methods").font(.subheadline.weight(.medium))
+                Spacer()
+                Image(systemName: "chevron.right").font(.caption).foregroundStyle(Theme.textTertiary)
+            }
+            .foregroundStyle(Theme.textSecondary)
+            .cardSurface(padding: 16)
+        }
+        .buttonStyle(.plain)
     }
 }
 

@@ -1,25 +1,32 @@
 import SwiftUI
 
 /// Shared layout for the pushed detail screens (title, subtitle, centered column).
+/// The reading column widens on regular-width devices (iPad) so the content fills
+/// the screen instead of stranding a phone-width column in empty margins.
 struct DetailScaffold<Content: View>: View {
     let title: String
     let subtitle: String
     @ViewBuilder let content: () -> Content
 
+    @Environment(\.horizontalSizeClass) private var hSize
+    private var isRegular: Bool { hSize == .regular }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(title).font(.largeTitle.bold()).foregroundStyle(Theme.text)
+                    Text(title)
+                        .font(isRegular ? .system(size: 40, weight: .bold) : .largeTitle.bold())
+                        .foregroundStyle(Theme.text)
                     Text(subtitle).font(.subheadline).foregroundStyle(Theme.textSecondary)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 .padding(.bottom, 4)
                 content()
             }
-            .frame(maxWidth: 540)
+            .frame(maxWidth: isRegular ? 720 : 540)
             .frame(maxWidth: .infinity)
-            .padding(.horizontal, 20)
+            .padding(.horizontal, isRegular ? 28 : 20)
             .padding(.vertical, 12)
         }
         .background(Theme.bg.ignoresSafeArea())
